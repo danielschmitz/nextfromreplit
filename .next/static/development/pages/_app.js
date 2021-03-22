@@ -4046,8 +4046,9 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/di
 // Imports
 
 exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);"]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);"]);
 // Module
-exports.push([module.i, "div {\n  font-size: 20px;\n  font-family: Roboto;\n}", "",{"version":3,"sources":["global.css"],"names":[],"mappings":"AAEA;EACE,eAAe;EACf,mBAAmB;AACrB","file":"global.css","sourcesContent":["@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);\n\ndiv {\n  font-size: 20px;\n  font-family: Roboto;\n}"]}]);
+exports.push([module.i, "div {\n  font-size: 20px;\n  font-family: Roboto;\n}", "",{"version":3,"sources":["global.css"],"names":[],"mappings":"AAGA;EACE,eAAe;EACf,mBAAmB;AACrB","file":"global.css","sourcesContent":["@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);\n@import url(https://fonts.googleapis.com/icon?family=Material+Icons);\n\ndiv {\n  font-size: 20px;\n  font-family: Roboto;\n}"]}]);
 
 
 /***/ }),
