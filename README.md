@@ -1,6 +1,8 @@
-## Next.js Repl.it Template
+## Next.js + Material UI + Mongo DB Repl.it Template
 
-Teste 2
+This is a template project using Next.js, Material UI and Mongo DB.
+
+
 
 [Next.js](https://nextjs.org/) is an easy-to-use React framework that ships with server-side rendering, hot module reloading, and many other features out-of-the-box. 
 
