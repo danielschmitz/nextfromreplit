@@ -7,6 +7,7 @@ function TopBar() {
     <Button
       variant="contained"
       color="primary"
+      href="/"
     >
       Home  
     </Button>
@@ -14,6 +15,7 @@ function TopBar() {
     <Button
       variant="contained"
       color="primary"
+       href="/categories"
     >
       Categories     
     </Button>
@@ -21,6 +23,7 @@ function TopBar() {
     <Button
       variant="contained"
       color="primary"
+       href="/products"
     >
       Products     
     </Button>
