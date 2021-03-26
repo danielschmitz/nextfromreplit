@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
 
-function TopBar() {
-   return <div>
+export default function TopBar() {
+   return <div id="topbar">
     <Button
       variant="contained"
       color="primary"
@@ -30,4 +30,3 @@ function TopBar() {
   </div>
 }
 
-export default TopBar;

@@ -1,10 +1,12 @@
   
 import ListCategories from '../components/categories/list'
 import HeaderCategories from '../components/categories/header'
+import Page from "../components/app/page";
 
-export default () => {
+export default function Categories()  {
   return <div>
-    <HeaderCategories />
-    <ListCategories />
+    <Page title="Categories">
+      <ListCategories />
+    </Page>
   </div>
 }

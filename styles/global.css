@@ -5,3 +5,7 @@ div {
   font-size: 14px;
   font-family: Roboto;
 }
+
+#topbar {
+  margin-bottom: 10px;
+}
