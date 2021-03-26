@@ -38,9 +38,6 @@ export default function ListCategories(props) {
                             <Button
                                 onClick={()=>props.onEdit(row)}
                             ><EditIcon /></Button>
-                            <Button
-                                onClick={()=>props.onDelete(row)}
-                            ><DeleteIcon /></Button>
                         </TableCell>
                     </TableRow>
                 ))}
