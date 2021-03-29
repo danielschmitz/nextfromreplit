@@ -22,6 +22,15 @@ export default async (req, res) => {
     }
   }
 
+  // Get a Category
+  const category = await db
+    .collection("categories")
+    .find(
+      {_id: new mongodb.ObjectID(req.query.id)}
+     )
+    .toArray();
+
+  return res.json(category);
 
 
 }

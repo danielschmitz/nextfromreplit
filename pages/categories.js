@@ -21,9 +21,19 @@ export default function Categories() {
     setIsOpened(false)
   }
 
-  async function handleSave(formData) {
-    console.log("handleSave", formData)
-    const result = await http.put(`/api/categories/${formData._id}`, formData)
+  async function handleSave(data) {
+    console.log("handleSave", data)
+    
+    const apiUrl = '/api/categories'
+    const result = await http(
+      {
+        method: data._id ? 'PUT' : 'POST',
+        url: data._id ? `${apiUrl}/${data._id}` : apiUrl,
+        data
+      }
+    )
+
+
     mutate('/api/categories') //reload categories
     setIsOpened(false)
   }

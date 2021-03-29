@@ -7,10 +7,10 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     // Create Category
     const category = req.body
-    await db
+    const result = await db
       .collection("categories")
       .insertOne(category)
-    return res.json(category);
+    return res.json(result.ops[0]);
   }
 
 
