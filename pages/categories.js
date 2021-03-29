@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import ListCategories from '../components/categories/list'
 import EditCategory from '../components/categories/edit'
-import HeaderCategories from '../components/categories/header'
 import Page from "../components/app/page";
 import { Button, LinearProgress } from "@material-ui/core"
 import http from '../http'
