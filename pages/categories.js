@@ -4,6 +4,9 @@ import ListCategories from '../components/categories/list'
 import EditCategory from '../components/categories/edit'
 import HeaderCategories from '../components/categories/header'
 import Page from "../components/app/page";
+import { Button, LinearProgress } from "@material-ui/core"
+import http from '../http'
+import { mutate } from "swr";
 
 export default function Categories() {
 
@@ -19,20 +22,33 @@ export default function Categories() {
     setIsOpened(false)
   }
 
-  function handleSave(formData) {
+  async function handleSave(formData) {
     console.log("handleSave", formData)
+    const result = await http.put(`/api/categories/${formData._id}`, formData)
+    mutate('/api/categories') //reload categories
     setIsOpened(false)
   }
 
+  function handleNew() {
+    setFormData({ name: '', description: '' })
+    setIsOpened(true)
+  }
+
+  const actions = <>
+    <Button size="small" color="primary" onClick={handleNew}>
+      New Category
+        </Button>
+  </>
+
   return <div>
-    <Page title="Categories">
+    <Page title="Categories" actions={actions}>
       <ListCategories onEdit={handleEdit} />
-      <EditCategory 
+      <EditCategory
         formData={formData}
         isOpened={isOpened}
         onClose={handleClose}
         onSave={handleSave}
-         />
+      />
     </Page>
   </div>
 }

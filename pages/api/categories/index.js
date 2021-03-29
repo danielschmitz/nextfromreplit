@@ -1,15 +1,19 @@
 import { connectToDatabase } from "../../../mongodb"
 
-
 export default async (req, res) => {
- 
-   const { db } = await connectToDatabase();
 
-   if (req.method === 'POST') {
+  const { db } = await connectToDatabase();
+
+  if (req.method === 'POST') {
     // Create Category
-    return;
-   }
-  
+    const category = req.body
+    await db
+      .collection("categories")
+      .insertOne(category)
+    return res.json(category);
+  }
+
+
   // Show All Categories
   const categories = await db
     .collection("categories")
